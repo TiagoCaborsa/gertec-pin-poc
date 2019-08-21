@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lId">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="1"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:id="@+id/btn1" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="2"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:id="@+id/btn2" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnPinNumberSize"
+            tools:text="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="4"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn4" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="5"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn5" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="6"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="7"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn7" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="8"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn8" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="9"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:theme="@style/ButtonPINCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/pin_cancel"
+            android:text="@string/cancel"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnPinTextSize"
+            android:id="@+id/btnCancel" />
+
+        <Button
+            style="@style/ButtonPINNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="0"
+            android:textSize="@dimen/btnPinNumberSize"
+            android:layout_weight="1"
+            android:id="@+id/btn0" />
+
+        <Button
+            android:theme="@style/ButtonPINClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/clear"
+            android:background="@color/pin_clear"
+            android:textSize="@dimen/btnPinTextSize"
+            android:layout_weight="1"
+            android:id="@+id/btnClear" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:theme="@style/ButtonPINConfirm"
+            android:textSize="@dimen/btnPinTextSize"
+            android:layout_width="match_parent"
+            android:background="@color/pin_confirm"
+            android:layout_height="match_parent"
+            android:text="@string/confirm"
+            android:id="@+id/btnConfirm" />
+
+    </LinearLayout>
+</LinearLayout>

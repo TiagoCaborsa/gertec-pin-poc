@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GertecPinPoc</string>
+
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="clear">Limpar</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
