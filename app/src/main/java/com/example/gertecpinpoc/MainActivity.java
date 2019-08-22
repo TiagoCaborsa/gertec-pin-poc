@@ -1,4 +1,4 @@
-package com.example.gertecpinpoc;
+package br.com.tiagocaborsa.gertecpinpoc;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

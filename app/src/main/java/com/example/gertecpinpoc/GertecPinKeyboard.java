@@ -1,4 +1,4 @@
-package com.example.gertecpinpoc;
+package br.com.tiagocaborsa.gertecpinpoc;
 
 import android.app.Activity;
 import android.widget.Button;

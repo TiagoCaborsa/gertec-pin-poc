@@ -1,4 +1,4 @@
-package com.example.gertecpinpoc;
+package br.com.tiagocaborsa.gertecpinpoc;
 
 public interface Constants {
     String ANDROID_CONTEXT = "ANDROID_CONTEXT";
