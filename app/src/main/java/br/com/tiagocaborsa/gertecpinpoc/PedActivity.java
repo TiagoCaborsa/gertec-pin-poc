@@ -1,8 +1,10 @@
 package br.com.tiagocaborsa.gertecpinpoc;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -42,6 +44,13 @@ public class PedActivity extends AppCompatActivity {
                 btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnCancel,
                 btnClear, btnConfirm, this
         );
+
+        findViewById(R.id.backToMain).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PedActivity.this, MainActivity.class));
+            }
+        });
 
     }
 }

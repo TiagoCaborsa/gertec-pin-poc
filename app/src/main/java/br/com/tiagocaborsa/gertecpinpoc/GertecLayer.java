@@ -1,11 +1,12 @@
 package br.com.tiagocaborsa.gertecpinpoc;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Button;
 
 import java.util.Map;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class GertecLayer {
 
@@ -26,7 +27,6 @@ public class GertecLayer {
     private Button btnCancel;
     private Button btnClear;
     private Button btnConfirm;
-    private Activity pedActivity;
 
     GertecLayer(Map<String, Object> properties) {
         context = (Context) properties.get(Constants.ANDROID_CONTEXT);
@@ -38,11 +38,11 @@ public class GertecLayer {
 
     public void openPed() {
         Intent intent = new Intent(context, gertecPinActivityClass);
+        intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     public boolean validateReferences() {
-
-        return pedActivity != null;
+        return gertecPinHelper.gertecPinKeyboard.getPedActivity() != null;
     }
 }

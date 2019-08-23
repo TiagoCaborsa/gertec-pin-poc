@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getName();
+    private GertecLayer gertecLayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button openPedButton = findViewById(R.id.openPedButton);
-        openPedButton.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.openPedButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -30,25 +32,38 @@ public class MainActivity extends AppCompatActivity {
                 properties.put(Constants.GERTEC_PIN_HELPER, GertecPinHelper.getInstance());
 
                 try {
-                    final GertecLayer gertecLayer = new GertecLayer(properties);
+                    gertecLayer = new GertecLayer(properties);
                     gertecLayer.openPed();
-
-                    if (gertecLayer.validateReferences()) {
-                        Log.d(
-                                MainActivity.class.getName(),
-                                "onClick: Succeeded in getting keyboard references!"
-                        );
-                    } else {
-                        Log.e(
-                                MainActivity.class.getName(),
-                                "onClick: Error in getting keyboard references!"
-                        );
-                    }
                 } catch (Exception e) {
-                    Log.e(MainActivity.class.getName(), "Error on open ped!", e);
+                    Log.e(TAG, "Error on open ped!", e);
                 }
 
             }
         });
+
+        findViewById(R.id.validateReferencesButton).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (gertecLayer.validateReferences()) {
+
+                            Toast.makeText(
+                                    MainActivity.this,
+                                    "onClick: Succeeded in getting keyboard references!",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+
+                        } else {
+
+                            Toast.makeText(
+                                    MainActivity.this,
+                                    "onClick: Error in getting keyboard references!",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+
+                        }
+                    }
+                }
+        );
     }
 }
