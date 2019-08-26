@@ -19,7 +19,6 @@ allprojects {
         google()
         jcenter()
         mavenLocal()
-        maven { url "https://packagecloud.io/stone/sdk-android-bcapi/maven2" }
     }
 }
 
