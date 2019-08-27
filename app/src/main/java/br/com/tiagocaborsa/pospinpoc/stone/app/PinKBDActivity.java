@@ -1,21 +1,28 @@
-package br.com.tiagocaborsa.gertecpinpoc;
+package br.com.tiagocaborsa.pospinpoc.stone.app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class PedActivity extends AppCompatActivity {
+import br.com.tiagocaborsa.pospinpoc.R;
+import br.com.tiagocaborsa.pospinpoc.stone.bc.ConfigPinKBDReferences;
+import br.com.tiagocaborsa.pospinpoc.stone.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.stone.bc.PinKBDReferences;
+
+public class PinKBDActivity extends AppCompatActivity {
+
+    private static final String TAG = PinKBDActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ped);
+        setContentView(R.layout.activity_pin_kbd);
         getWindow().setGravity(Gravity.BOTTOM);
         WindowManager.LayoutParams p = getWindow().getAttributes();
         p.width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -40,17 +47,15 @@ public class PedActivity extends AppCompatActivity {
         Button btnClear = layout.findViewById(R.id.btnClear);
         Button btnConfirm = layout.findViewById(R.id.btnConfirm);
 
-        GertecPinHelper.getInstance().gertecPinKeyboard = new GertecPinKeyboard(
+        PinKBDReferences pinKBDReferences = new PinKBDReferences(
                 btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnCancel,
                 btnClear, btnConfirm, this
         );
 
-        findViewById(R.id.backToMain).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PedActivity.this, MainActivity.class));
-            }
-        });
+        ((ConfigPinKBDReferences) getIntent().
+                getSerializableExtra(Constants.CONFIG_PIN_KBD_REFERENCES_INTENT)
+        ).setPinKBDReferences(pinKBDReferences);
 
+        Log.d(TAG, "onCreate: end");
     }
 }

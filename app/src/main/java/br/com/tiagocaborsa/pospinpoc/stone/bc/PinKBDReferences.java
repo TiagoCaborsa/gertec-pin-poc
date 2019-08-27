@@ -1,9 +1,11 @@
-package br.com.tiagocaborsa.gertecpinpoc;
+package br.com.tiagocaborsa.pospinpoc.stone.bc;
 
 import android.app.Activity;
 import android.widget.Button;
 
-public class GertecPinKeyboard {
+import java.io.Serializable;
+
+public class PinKBDReferences implements Serializable {
 
     private Button btn0;
     private Button btn1;
@@ -18,12 +20,11 @@ public class GertecPinKeyboard {
     private Button btnCancel;
     private Button btnClear;
     private Button btnConfirm;
-    private Activity pedActivity;
+    private Activity activity;
 
-    public GertecPinKeyboard(Button btn0, Button btn1, Button btn2, Button btn3, Button btn4,
-                             Button btn5, Button btn6, Button btn7, Button btn8, Button btn9,
-                             Button btnCancel, Button btnClear, Button btnConfirm,
-                             Activity pedActivity) {
+    public PinKBDReferences(Button btn0, Button btn1, Button btn2, Button btn3, Button btn4, Button btn5,
+                            Button btn6, Button btn7, Button btn8, Button btn9, Button btnCancel,
+                            Button btnClear, Button btnConfirm, Activity activity) {
         this.btn0 = btn0;
         this.btn1 = btn1;
         this.btn2 = btn2;
@@ -37,7 +38,7 @@ public class GertecPinKeyboard {
         this.btnCancel = btnCancel;
         this.btnClear = btnClear;
         this.btnConfirm = btnConfirm;
-        this.pedActivity = pedActivity;
+        this.activity = activity;
     }
 
     public Button getBtn0() {
@@ -92,7 +93,8 @@ public class GertecPinKeyboard {
         return btnConfirm;
     }
 
-    public Activity getPedActivity() {
-        return pedActivity;
+    public Activity getActivity() {
+        return activity;
     }
+
 }
