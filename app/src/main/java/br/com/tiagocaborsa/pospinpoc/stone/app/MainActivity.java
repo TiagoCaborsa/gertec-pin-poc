@@ -32,11 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
                 final Map<String, Object> properties = new HashMap<>();
                 properties.put(Constants.ANDROID_CONTEXT, getApplicationContext());
-                properties.put(Constants.PIN_ACTIVIY_CLASS, PinKBDActivity.class);
+                properties.put(Constants.PIN_KBD_LAYOUT_ID, R.layout.activity_pin_kbd);
+                properties.put(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, R.id.include);
 
                 try {
-                    bcApiImpl = new ManufacturerBcApiImpl(properties);
-                    bcApiImpl.goOnChip("F27AHF27AHF72AHF7");
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            bcApiImpl = new ManufacturerBcApiImpl(properties);
+                            bcApiImpl.goOnChip("F27AHF27AHF72AHF7");
+                        }
+                    }).start();
                 } catch (Exception e) {
                     Log.e(TAG, "Error on open pinKBD!", e);
                 }
