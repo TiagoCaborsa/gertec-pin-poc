@@ -1,11 +1,9 @@
-package br.com.tiagocaborsa.pospinpoc.stone.bc;
+package br.com.tiagocaborsa.pospinpoc.manufacturer;
 
 import android.app.Activity;
 import android.widget.Button;
 
-import java.io.Serializable;
-
-public class PinKBDReferences implements Serializable {
+public class PinKBDReferences {
 
     private Button btn0;
     private Button btn1;
