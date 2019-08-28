@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.stone.app;
+package br.com.tiagocaborsa.pospinpoc.manufacturer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import br.com.tiagocaborsa.pospinpoc.R;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.ConfigPinKBDReferences;
 import br.com.tiagocaborsa.pospinpoc.stone.bc.Constants;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.PinKBDReferences;
 
 public class PinKBDActivity extends AppCompatActivity {
 
@@ -22,7 +20,10 @@ public class PinKBDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pin_kbd);
+
+        final int PIN_LAYOUT_ID = getIntent().getIntExtra(Constants.PIN_KBD_LAYOUT_ID, 0);
+        setContentView(PIN_LAYOUT_ID);
+
         getWindow().setGravity(Gravity.BOTTOM);
         WindowManager.LayoutParams p = getWindow().getAttributes();
         p.width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -31,7 +32,9 @@ public class PinKBDActivity extends AppCompatActivity {
         setTitle("");
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
-        LinearLayout layout = findViewById(R.id.include);
+        final int PIN_KBD_BUTTONS_LAYOUT_ID = getIntent().
+                getIntExtra(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, 0);
+        LinearLayout layout = findViewById(PIN_KBD_BUTTONS_LAYOUT_ID);
 
         Button btn0 = layout.findViewById(R.id.btn0);
         Button btn1 = layout.findViewById(R.id.btn1);
@@ -52,9 +55,11 @@ public class PinKBDActivity extends AppCompatActivity {
                 btnClear, btnConfirm, this
         );
 
-        ((ConfigPinKBDReferences) getIntent().
-                getSerializableExtra(Constants.CONFIG_PIN_KBD_REFERENCES_INTENT)
-        ).setPinKBDReferences(pinKBDReferences);
+        PinKBDReferencesHelper.pinKBDReferences = pinKBDReferences;
+
+//        ((ConfigPinKBDReferences) getIntent().
+//                getSerializableExtra(ManufacturerBcApiImpl.CONFIG_PIN_KBD_REFERENCES_INTENT)
+//        ).setPinKBDReferences(pinKBDReferences);
 
         Log.d(TAG, "onCreate: end");
     }
