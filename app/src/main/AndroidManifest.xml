@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name=".stone.app.PinKBDActivity"
+            android:name=".manufacturer.PinKBDActivity"
             android:label="PinKBDActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 

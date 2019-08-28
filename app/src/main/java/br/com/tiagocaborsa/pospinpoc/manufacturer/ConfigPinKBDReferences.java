@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.stone.bc;
+package br.com.tiagocaborsa.pospinpoc.manufacturer;
 
 import java.io.Serializable;
 
