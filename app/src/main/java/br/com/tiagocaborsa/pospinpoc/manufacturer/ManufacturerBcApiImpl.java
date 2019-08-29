@@ -15,10 +15,8 @@ public class ManufacturerBcApiImpl extends BcApi {
 
     private static final String TAG = ManufacturerBcApiImpl.class.getName();
     private final Context context;
-    private final PinKBDReferencesHelper pinKBDReferencesHelper = new PinKBDReferencesHelper();
     private final int PIN_KBD_LAYOUT;
     private final int PIN_KBD_BUTTONS_LAYOUT;
-    static final String CONFIG_PIN_KBD_REFERENCES_INTENT = "CONFIG_PIN_KBD_REFERENCES_INTENT";
 
     public ManufacturerBcApiImpl(Map<String, Object> properties) {
         super(properties);
@@ -40,7 +38,6 @@ public class ManufacturerBcApiImpl extends BcApi {
         Log.i(TAG, "openPinKBD: start");
         Intent intent = new Intent(context, PinKBDActivity.class);
         intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-//        intent.putExtra(CONFIG_PIN_KBD_REFERENCES_INTENT, pinKBDReferencesHelper);
         intent.putExtra(Constants.PIN_KBD_LAYOUT_ID, PIN_KBD_LAYOUT);
         intent.putExtra(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, PIN_KBD_BUTTONS_LAYOUT);
         context.startActivity(intent);
@@ -50,8 +47,8 @@ public class ManufacturerBcApiImpl extends BcApi {
     private void waitActivityOpen() {
         Log.i(TAG, "waitActivityOpen: start");
         try {
-            while (PinKBDReferencesHelper.pinKBDReferences == null) {
-//                while (pinKBDReferencesHelper.getPinKBDReferences() == null) {
+//            while (PinKBDReferencesHelper.pinKBDReferences == null) {
+            while (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null) {
                 try {
                     Thread.sleep(200);
                     Log.i(TAG, "waitActivityOpen: while in");
