@@ -3,9 +3,6 @@ package br.com.tiagocaborsa.pospinpoc.manufacturer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -24,13 +21,13 @@ public class PinKBDActivity extends AppCompatActivity {
         final int PIN_LAYOUT_ID = getIntent().getIntExtra(Constants.PIN_KBD_LAYOUT_ID, 0);
         setContentView(PIN_LAYOUT_ID);
 
-        getWindow().setGravity(Gravity.BOTTOM);
-        WindowManager.LayoutParams p = getWindow().getAttributes();
-        p.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        getWindow().setAttributes(p);
-        this.setFinishOnTouchOutside(false);
-        setTitle("");
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+//        getWindow().setGravity(Gravity.BOTTOM);
+//        WindowManager.LayoutParams p = getWindow().getAttributes();
+//        p.width = ViewGroup.LayoutParams.MATCH_PARENT;
+//        getWindow().setAttributes(p);
+//        this.setFinishOnTouchOutside(false);
+//        setTitle("");
+//        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
         final int PIN_KBD_BUTTONS_LAYOUT_ID = getIntent().
                 getIntExtra(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, 0);
