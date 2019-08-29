@@ -50,29 +50,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        findViewById(R.id.validateReferencesButton).setOnClickListener(
-//                new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        if (bcApiImpl.validateReferences()) {
-//
-//                            Toast.makeText(
-//                                    MainActivity.this,
-//                                    "onClick: Succeeded in getting keyboard references!",
-//                                    Toast.LENGTH_SHORT
-//                            ).show();
-//
-//                        } else {
-//
-//                            Toast.makeText(
-//                                    MainActivity.this,
-//                                    "onClick: Error in getting keyboard references!",
-//                                    Toast.LENGTH_SHORT
-//                            ).show();
-//
-//                        }
-//                    }
-//                }
-//        );
     }
 }
