@@ -55,12 +55,7 @@ public class PinKBDActivity extends AppCompatActivity {
                 btnClear, btnConfirm, this
         );
 
-        PinKBDReferencesHelper.pinKBDReferences = pinKBDReferences;
-
-//        ((ConfigPinKBDReferences) getIntent().
-//                getSerializableExtra(ManufacturerBcApiImpl.CONFIG_PIN_KBD_REFERENCES_INTENT)
-//        ).setPinKBDReferences(pinKBDReferences);
-
+        PinKBDReferencesHelper.INSTANCE().setPinKBDReferences(pinKBDReferences);
         Log.d(TAG, "onCreate: end");
     }
 }
