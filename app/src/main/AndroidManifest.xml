@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".stone.app.MainActivity"
+            android:name=".acquirer.app.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -22,8 +22,8 @@
 
         <activity
             android:name=".manufacturer.PinKBDActivity"
-            android:label="PinKBDActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label=""
+            android:theme="@style/AppDialogTheme"></activity>
 
     </application>
 

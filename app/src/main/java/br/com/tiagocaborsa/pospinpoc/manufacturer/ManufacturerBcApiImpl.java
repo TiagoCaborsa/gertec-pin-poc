@@ -6,8 +6,8 @@ import android.util.Log;
 
 import java.util.Map;
 
-import br.com.tiagocaborsa.pospinpoc.stone.bc.Constants;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.api.BcApi;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
@@ -47,7 +47,6 @@ public class ManufacturerBcApiImpl extends BcApi {
     private void waitActivityOpen() {
         Log.i(TAG, "waitActivityOpen: start");
         try {
-//            while (PinKBDReferencesHelper.pinKBDReferences == null) {
             while (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null) {
                 try {
                     Thread.sleep(200);

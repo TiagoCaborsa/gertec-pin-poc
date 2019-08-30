@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.stone.app;
+package br.com.tiagocaborsa.pospinpoc.acquirer.app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +11,8 @@ import java.util.Map;
 
 import br.com.tiagocaborsa.pospinpoc.R;
 import br.com.tiagocaborsa.pospinpoc.manufacturer.ManufacturerBcApiImpl;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.Constants;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.api.BcApi;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
 
 public class MainActivity extends AppCompatActivity {
 

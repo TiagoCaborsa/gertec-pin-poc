@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import br.com.tiagocaborsa.pospinpoc.R;
-import br.com.tiagocaborsa.pospinpoc.stone.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
 
 public class PinKBDActivity extends AppCompatActivity {
 
@@ -17,17 +17,10 @@ public class PinKBDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
+        setFinishOnTouchOutside(false);
 
         final int PIN_LAYOUT_ID = getIntent().getIntExtra(Constants.PIN_KBD_LAYOUT_ID, 0);
         setContentView(PIN_LAYOUT_ID);
-
-//        getWindow().setGravity(Gravity.BOTTOM);
-//        WindowManager.LayoutParams p = getWindow().getAttributes();
-//        p.width = ViewGroup.LayoutParams.MATCH_PARENT;
-//        getWindow().setAttributes(p);
-//        this.setFinishOnTouchOutside(false);
-//        setTitle("");
-//        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
         final int PIN_KBD_BUTTONS_LAYOUT_ID = getIntent().
                 getIntExtra(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, 0);
