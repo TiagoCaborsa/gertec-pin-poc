@@ -6,7 +6,7 @@ import android.util.Log;
 
 import java.util.Map;
 
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.Constants;
 import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;

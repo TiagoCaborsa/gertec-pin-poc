@@ -11,7 +11,7 @@ import java.util.Map;
 
 import br.com.tiagocaborsa.pospinpoc.R;
 import br.com.tiagocaborsa.pospinpoc.manufacturer.ManufacturerBcApiImpl;
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.Constants;
 import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
 
 public class MainActivity extends AppCompatActivity {

@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import br.com.tiagocaborsa.pospinpoc.R;
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.Constants;
+import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.Constants;
 
 public class PinKBDActivity extends AppCompatActivity {
 
