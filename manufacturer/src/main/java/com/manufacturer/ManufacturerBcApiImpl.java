@@ -21,8 +21,8 @@ public class ManufacturerBcApiImpl extends BcApi {
     public ManufacturerBcApiImpl(Map<String, Object> properties) {
         super(properties);
         context = (Context) properties.get(Constants.ANDROID_CONTEXT);
-        PIN_KBD_LAYOUT = (int) properties.get(Constants.PIN_KBD_LAYOUT_ID);
-        PIN_KBD_BUTTONS_LAYOUT = (int) properties.get(Constants.PIN_KBD_BUTTONS_LAYOUT_ID);
+        PIN_KBD_LAYOUT = (int) properties.get(Constants.PinLayout.PIN_KBD_LAYOUT_ID);
+        PIN_KBD_BUTTONS_LAYOUT = (int) properties.get(Constants.PinLayout.PIN_KBD_BUTTONS_LAYOUT_ID);
     }
 
     @Override
@@ -38,8 +38,8 @@ public class ManufacturerBcApiImpl extends BcApi {
         Log.i(TAG, "openPinKBD: start");
         Intent intent = new Intent(context, PinKBDActivity.class);
         intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra(Constants.PIN_KBD_LAYOUT_ID, PIN_KBD_LAYOUT);
-        intent.putExtra(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, PIN_KBD_BUTTONS_LAYOUT);
+        intent.putExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, PIN_KBD_LAYOUT);
+        intent.putExtra(Constants.PinLayout.PIN_KBD_BUTTONS_LAYOUT_ID, PIN_KBD_BUTTONS_LAYOUT);
         context.startActivity(intent);
         Log.i(TAG, "openPinKBD: end");
     }

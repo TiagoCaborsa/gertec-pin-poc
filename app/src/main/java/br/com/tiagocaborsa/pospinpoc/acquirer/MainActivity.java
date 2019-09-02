@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
                 final Map<String, Object> properties = new HashMap<>();
                 properties.put(Constants.ANDROID_CONTEXT, getApplicationContext());
-                properties.put(Constants.PIN_KBD_LAYOUT_ID, R.layout.activity_pin_kbd);
-                properties.put(Constants.PIN_KBD_BUTTONS_LAYOUT_ID, R.id.include);
+                properties.put(Constants.PinLayout.PIN_KBD_LAYOUT_ID, R.layout.activity_pin_kbd);
+                properties.put(Constants.PinLayout.PIN_KBD_BUTTONS_LAYOUT_ID, R.id.include);
 
                 try {
                     new Thread(new Runnable() {

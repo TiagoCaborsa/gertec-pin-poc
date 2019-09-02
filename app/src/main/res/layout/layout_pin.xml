@@ -17,7 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="1"
+            android:tag="btn1"
+            android:text="@string/btn1Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -26,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="2"
+            android:tag="btn2"
+            android:text="@string/btn2Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -35,7 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="3"
+            android:tag="btn3"
+            android:text="@string/btn3Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
     </LinearLayout>
@@ -52,7 +55,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="4"
+            android:tag="btn4"
+            android:text="@string/btn4Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -61,7 +65,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="5"
+            android:tag="btn5"
+            android:text="@string/btn5Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -70,7 +75,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="6"
+            android:tag="btn6"
+            android:text="@string/btn6Text"
             android:textSize="@dimen/btnPinNumberSize" />
     </LinearLayout>
 
@@ -86,7 +92,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="7"
+            android:tag="btn7"
+            android:text="@string/btn7Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -95,7 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="8"
+            android:tag="btn8"
+            android:text="@string/btn8Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -104,7 +112,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="9"
+            android:tag="btn9"
+            android:text="@string/btn9Text"
             android:textSize="@dimen/btnPinNumberSize" />
     </LinearLayout>
 
@@ -120,7 +129,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/pin_cancel"
-            android:text="@string/cancel"
+            android:tag="btnCancel"
+            android:text="@string/btnCancelText"
             android:textSize="@dimen/btnPinTextSize"
             android:theme="@style/ButtonPINCancel" />
 
@@ -130,7 +140,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="0"
+            android:tag="btn0"
+            android:text="@string/btn0Text"
             android:textSize="@dimen/btnPinNumberSize" />
 
         <Button
@@ -139,7 +150,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/pin_clear"
-            android:text="@string/clear"
+            android:tag="btnClear"
+            android:text="@string/btnClearText"
             android:textSize="@dimen/btnPinTextSize"
             android:theme="@style/ButtonPINClear" />
 
@@ -156,7 +168,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/pin_confirm"
-            android:text="@string/confirm"
+            android:tag="btnConfirm"
+            android:text="@string/btnConfirmText"
             android:textSize="@dimen/btnPinTextSize"
             android:theme="@style/ButtonPINConfirm" />
 

@@ -1,8 +1,34 @@
 <resources>
     <string name="app_name">pospinpoc</string>
 
-    <string name="cancel">Cancelar</string>
-    <string name="confirm">Confirmar</string>
-    <string name="clear">Limpar</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <string name="btnCancelText">Cancelar</string>
+    <string name="btnConfirmText">Confirmar</string>
+    <string name="btnClearText">Limpar</string>
+    <string name="btn9Text">9</string>
+    <string name="btn8Text">8</string>
+    <string name="btn7Text">7</string>
+    <string name="btn6Text">6</string>
+    <string name="btn5Text">5</string>
+    <string name="btn4Text">4</string>
+    <string name="btn3Text">3</string>
+    <string name="btn2Text">2</string>
+    <string name="btn1Text">1</string>
+    <string name="btn0Text">0</string>
+
+    <string name="btnCancelTag">btnCancelTag</string>
+    <string name="btnConfirmTag">btnConfirmTag</string>
+    <string name="btnClearTag">btnClearTag</string>
+    <string name="btn9Tag">btn9Tag</string>
+    <string name="btn8Tag">btn8Tag</string>
+    <string name="btn7Tag">btn7Tag</string>
+    <string name="btn6Tag">btn6Tag</string>
+    <string name="btn5Tag">btn5Tag</string>
+    <string name="btn4Tag">btn4Tag</string>
+    <string name="btn3Tag">btn3Tag</string>
+    <string name="btn2Tag">btn2Tag</string>
+    <string name="btn1Tag">btn1Tag</string>
+    <string name="btn0Tag">btn0Tag</string>
+
 </resources>
