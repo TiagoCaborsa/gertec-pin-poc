@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.acquirer.bc.api;
+package br.com.bcapi;
 
 public interface Constants {
     String ANDROID_CONTEXT = "ANDROID_CONTEXT";

@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.acquirer.app;
+package br.com.tiagocaborsa.pospinpoc.acquirer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.manufacturer.ManufacturerBcApiImpl;
+
 import java.util.HashMap;
 import java.util.Map;
 
+import br.com.bcapi.BcApi;
+import br.com.bcapi.Constants;
 import br.com.tiagocaborsa.pospinpoc.R;
-import br.com.tiagocaborsa.pospinpoc.manufacturer.ManufacturerBcApiImpl;
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.Constants;
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.acquirer.bc.api;
+package br.com.bcapi;
 
 import java.util.Map;
 

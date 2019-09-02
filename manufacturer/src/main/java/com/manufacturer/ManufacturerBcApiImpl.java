@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.manufacturer;
+package com.manufacturer;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,8 +6,8 @@ import android.util.Log;
 
 import java.util.Map;
 
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.Constants;
-import br.com.tiagocaborsa.pospinpoc.acquirer.bc.api.BcApi;
+import br.com.bcapi.BcApi;
+import br.com.bcapi.Constants;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 

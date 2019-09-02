@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".acquirer.app.MainActivity"
+            android:name=".acquirer.MainActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar">
@@ -19,11 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".manufacturer.PinKBDActivity"
-            android:label=""
-            android:theme="@style/AppDialogTheme"></activity>
 
     </application>
 

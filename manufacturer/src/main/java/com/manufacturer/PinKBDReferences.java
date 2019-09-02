@@ -1,4 +1,4 @@
-package br.com.tiagocaborsa.pospinpoc.manufacturer;
+package com.manufacturer;
 
 import android.app.Activity;
 import android.widget.Button;
