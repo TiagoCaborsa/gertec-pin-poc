@@ -31,7 +31,7 @@ public class ManufacturerBcApiImpl extends BcApi {
         openPinKBD();
         waitActivityOpen();
         Log.d(TAG, "goOnChip: Send GOC -> " + tags);
-        Log.i(TAG, "goOnChip: end - " + tags);
+        Log.i(TAG, "goOnChip: end");
     }
 
     private void openPinKBD() {
