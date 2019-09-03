@@ -48,7 +48,7 @@ public class ManufacturerBcApiImpl extends BcApi {
 
     private int waitActivityOpen() {
         Log.i(TAG, "waitActivityOpen: start");
-        int resultCode = ResultCode.PP_OK;
+        int resultCode = ResultCode.PP_NOTOPEN;
         try {
 
             int timeoutInMillis = 5000;
@@ -70,10 +70,11 @@ public class ManufacturerBcApiImpl extends BcApi {
             Log.e(TAG, "waitActivityOpen: NullPointerException", e);
         }
 
-        if (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null) {
-            resultCode = ResultCode.PP_NOTOPEN;
+        if (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() != null) {
+            resultCode = ResultCode.PP_OK;
         }
 
+        Log.d(TAG, "waitActivityOpen: pin resuslt code - " + resultCode);
         Log.i(TAG, "waitActivityOpen: end");
         return resultCode;
     }
