@@ -36,14 +36,18 @@ public class MainActivity extends AppCompatActivity {
                 properties.put(Constants.PinLayout.PIN_KBD_LAYOUT_ID, R.layout.activity_pin_kbd);
                 properties.put(Constants.PinLayout.PIN_KBD_BUTTONS_LAYOUT_ID, R.id.include);
 
+                final int[] resultCode = new int[1];
+
                 try {
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
                             bcApiImpl = new ManufacturerBcApiImpl(properties);
-                            bcApiImpl.goOnChip("F27AHF27AHF72AHF7");
+                            resultCode[0] = bcApiImpl.goOnChip("F27AHF27AHF72AHF7");
+                            Log.i(TAG, "run: " + resultCode[0]);
                         }
                     }).start();
+
                 } catch (Exception e) {
                     Log.e(TAG, "Error on open pinKBD!", e);
                 }

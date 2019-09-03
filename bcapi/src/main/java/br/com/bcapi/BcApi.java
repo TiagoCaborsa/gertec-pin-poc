@@ -10,5 +10,5 @@ public abstract class BcApi {
         this.properties = properties;
     }
 
-    public abstract void goOnChip(final String tags);
+    public abstract int goOnChip(final String tags);
 }

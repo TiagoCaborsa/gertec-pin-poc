@@ -8,6 +8,7 @@ import java.util.Map;
 
 import br.com.bcapi.BcApi;
 import br.com.bcapi.Constants;
+import br.com.bcapi.ResultCode;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
@@ -26,12 +27,13 @@ public class ManufacturerBcApiImpl extends BcApi {
     }
 
     @Override
-    public void goOnChip(String tags) {
+    public int goOnChip(String tags) {
         Log.i(TAG, "goOnChip: start");
         openPinKBD();
-        waitActivityOpen();
+        int resultCode = waitActivityOpen();
         Log.d(TAG, "goOnChip: Send GOC -> " + tags);
         Log.i(TAG, "goOnChip: end");
+        return resultCode;
     }
 
     private void openPinKBD() {
@@ -44,21 +46,36 @@ public class ManufacturerBcApiImpl extends BcApi {
         Log.i(TAG, "openPinKBD: end");
     }
 
-    private void waitActivityOpen() {
+    private int waitActivityOpen() {
         Log.i(TAG, "waitActivityOpen: start");
+        int resultCode = ResultCode.PP_OK;
         try {
-            while (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null) {
+
+            int timeoutInMillis = 5000;
+            long deadlineInMillis = System.currentTimeMillis() + timeoutInMillis;
+
+            while (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null &&
+                    System.currentTimeMillis() <= deadlineInMillis) {
+
                 try {
                     Thread.sleep(200);
                     Log.i(TAG, "waitActivityOpen: while in");
                 } catch (InterruptedException e) {
                     Log.e(TAG, "waitActivityOpen: InterruptedException", e);
                 }
+
             }
+
         } catch (NullPointerException e) {
             Log.e(TAG, "waitActivityOpen: NullPointerException", e);
         }
+
+        if (PinKBDReferencesHelper.INSTANCE().getPinKBDReferences() == null) {
+            resultCode = ResultCode.PP_NOTOPEN;
+        }
+
         Log.i(TAG, "waitActivityOpen: end");
+        return resultCode;
     }
 
 }
