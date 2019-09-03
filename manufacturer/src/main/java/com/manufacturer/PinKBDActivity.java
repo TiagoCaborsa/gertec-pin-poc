@@ -20,7 +20,9 @@ public class PinKBDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setFinishOnTouchOutside(false);
 
-        final int PIN_LAYOUT_ID = getIntent().getIntExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, 0);
+        final int PIN_LAYOUT_ID = getIntent().getIntExtra(
+                Constants.PinLayout.PIN_KBD_LAYOUT_ID, 0
+        );
         setContentView(PIN_LAYOUT_ID);
 
         final int PIN_KBD_BUTTONS_LAYOUT_ID = getIntent().
@@ -42,7 +44,8 @@ public class PinKBDActivity extends AppCompatActivity {
         Button btnConfirm = layout.findViewWithTag(Constants.PinLayout.BTN_CONFIRM_TAG);
 
 
-        // ONLY FOR TEST BUTTONS REFERENCES
+        // ------ ONLY FOR TEST BUTTONS REFERENCES -------------------------------------------------
+
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,7 +137,7 @@ public class PinKBDActivity extends AppCompatActivity {
             }
         });
 
-        // -----------------------------
+        // -----------------------------------------------------------------------------------------
 
 
         PinKBDReferences pinKBDReferences = new PinKBDReferences(
