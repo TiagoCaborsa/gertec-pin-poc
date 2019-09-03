@@ -3,8 +3,10 @@ package com.manufacturer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import br.com.bcapi.Constants;
 
@@ -39,6 +41,102 @@ public class PinKBDActivity extends AppCompatActivity {
         Button btnClear = layout.findViewWithTag(Constants.PinLayout.BTN_CLEAR_TAG);
         Button btnConfirm = layout.findViewWithTag(Constants.PinLayout.BTN_CONFIRM_TAG);
 
+
+        // ONLY FOR TEST BUTTONS REFERENCES
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN0");
+            }
+        });
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN1");
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN2");
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN3");
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN4");
+            }
+        });
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN5");
+            }
+        });
+
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN6");
+            }
+        });
+
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN7");
+            }
+        });
+
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN8");
+            }
+        });
+
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTN9");
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTNCANCEL");
+            }
+        });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTNCLEAR");
+            }
+        });
+
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("BTNCONFIRM");
+            }
+        });
+
+        // -----------------------------
+
+
         PinKBDReferences pinKBDReferences = new PinKBDReferences(
                 btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnCancel,
                 btnClear, btnConfirm, this
@@ -46,5 +144,11 @@ public class PinKBDActivity extends AppCompatActivity {
 
         PinKBDReferencesHelper.INSTANCE().setPinKBDReferences(pinKBDReferences);
         Log.i(TAG, "onCreate: end");
+
     }
+
+    private void toast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
 }
