@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-
-    <color name="pin_clear">#CCCC00</color>
-    <color name="pin_confirm">#00BB00</color>
-    <color name="pin_cancel">#FF0000</color>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#4C16AD</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="pinPasswordBackgroundColor">#f2f5f1</color>
+    <color name="cancelColor">#d50000</color>
+    <color name="deleteColor">#f9a528</color>
+    <color name="enterColor">#0AF515</color>
 </resources>

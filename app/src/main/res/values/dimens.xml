@@ -1,10 +1,9 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="activity_horizontal_margin">8dp</dimen>
-    <dimen name="activity_vertical_margin">8dp</dimen>
-    <dimen name="label_size">5pt</dimen>
-    <dimen name="input_label_vertical_spacing">8dp</dimen>
-    <dimen name="input_label_horizontal_spacing">4dp</dimen>
-    <dimen name="btnPinTextSize">14sp</dimen>
-    <dimen name="btnPinNumberSize">22sp</dimen>
+    <dimen name="number_key_width">68dp</dimen>
+    <dimen name="number_key_height">68dp</dimen>
+    <dimen name="number_key_padding">16dp</dimen>
+    <dimen name="number_key_border_margin">18dp</dimen>
+    <dimen name="number_key_vertical_margin">16dp</dimen>
+    <dimen name="number_key_horizontal_margin">18dp</dimen>
+    <dimen name="enter_key_horizontal_padding">18dp</dimen>
 </resources>

@@ -1,4 +1,4 @@
-package com.manufacturer;
+package br.com.manufacturer;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.manufacturer;
+package br.com.manufacturer;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

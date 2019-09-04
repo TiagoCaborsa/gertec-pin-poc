@@ -1,14 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.manufacturer">
 
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
     <application>
-        <activity
-            android:name="com.manufacturer.PinKBDActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/AppDialogTheme">
-        </activity>
+        <activity android:name="br.com.manufacturer.PinKBDActivity" />
     </application>
 
 </manifest>

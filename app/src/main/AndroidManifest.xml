@@ -14,7 +14,7 @@
             android:name=".acquirer.MainActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleInstance"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

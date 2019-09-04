@@ -1,4 +1,4 @@
-package com.manufacturer;
+package br.com.manufacturer;
 
 import android.app.Activity;
 import android.widget.Button;
@@ -17,12 +17,12 @@ public class PinKBDReferences {
     private Button btn9;
     private Button btnCancel;
     private Button btnClear;
-    private Button btnConfirm;
+    private Button btnEnter;
     private Activity activity;
 
     public PinKBDReferences(Button btn0, Button btn1, Button btn2, Button btn3, Button btn4, Button btn5,
                             Button btn6, Button btn7, Button btn8, Button btn9, Button btnCancel,
-                            Button btnClear, Button btnConfirm, Activity activity) {
+                            Button btnClear, Button btnEnter, Activity activity) {
         this.btn0 = btn0;
         this.btn1 = btn1;
         this.btn2 = btn2;
@@ -35,7 +35,7 @@ public class PinKBDReferences {
         this.btn9 = btn9;
         this.btnCancel = btnCancel;
         this.btnClear = btnClear;
-        this.btnConfirm = btnConfirm;
+        this.btnEnter = btnEnter;
         this.activity = activity;
     }
 
@@ -87,8 +87,8 @@ public class PinKBDReferences {
         return btnClear;
     }
 
-    public Button getBtnConfirm() {
-        return btnConfirm;
+    public Button getBtnEnter() {
+        return btnEnter;
     }
 
     public Activity getActivity() {
