@@ -8,7 +8,6 @@ import java.util.Map;
 
 import br.com.bcapi.BcApi;
 import br.com.bcapi.Constants;
-import br.com.bcapi.PinKDBButtonsIds;
 import br.com.bcapi.ResultCode;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
@@ -18,13 +17,11 @@ public class ManufacturerBcApiImpl extends BcApi {
     private static final String TAG = ManufacturerBcApiImpl.class.getName();
     private final Context context;
     private final int PIN_KBD_LAYOUT;
-    private PinKDBButtonsIds pinKDBButtonsIds;
 
     public ManufacturerBcApiImpl(Map<String, Object> properties) {
         super(properties);
         context = (Context) properties.get(Constants.ANDROID_CONTEXT);
         PIN_KBD_LAYOUT = (int) properties.get(Constants.PinLayout.PIN_KBD_LAYOUT_ID);
-        pinKDBButtonsIds = (PinKDBButtonsIds) properties.get(Constants.PinLayout.PIN_KDB_BUTTONS_IDS);
     }
 
     @Override
@@ -42,7 +39,6 @@ public class ManufacturerBcApiImpl extends BcApi {
         Intent intent = new Intent(context, PinKBDActivity.class);
         intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, PIN_KBD_LAYOUT);
-        intent.putExtra(Constants.PinLayout.PIN_KDB_BUTTONS_IDS, pinKDBButtonsIds);
         context.startActivity(intent);
         Log.i(TAG, "openPinKBD: end");
     }

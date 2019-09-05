@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import br.com.bcapi.Constants;
-import br.com.bcapi.PinKDBButtonsIds;
+import br.com.bcapi.R;
 
 public class PinKBDActivity extends Activity {
 
@@ -20,37 +20,27 @@ public class PinKBDActivity extends Activity {
         super.onCreate(savedInstanceState);
         setFinishOnTouchOutside(false);
 
-        Bundle extras = getIntent().getExtras();
-
-        int pinLayoutId = 0;
-        PinKDBButtonsIds pinKDBButtonsIds = null;
-
-        if (extras != null) {
-            pinLayoutId = extras.getInt(Constants.PinLayout.PIN_KBD_LAYOUT_ID);
-            pinKDBButtonsIds = extras.getParcelable(
-                    Constants.PinLayout.PIN_KDB_BUTTONS_IDS
-            );
-        }
+        final int pinLayoutId = getIntent().
+                getIntExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, 0);
 
         if (pinLayoutId != 0) {
             setContentView(pinLayoutId);
-        }
 
-        if (pinKDBButtonsIds != null) {
+            final View rootView = getWindow().getDecorView().getRootView();
 
-            Button btn0 = findViewById(pinKDBButtonsIds.getBtn0Id());
-            Button btn1 = findViewById(pinKDBButtonsIds.getBtn1Id());
-            Button btn2 = findViewById(pinKDBButtonsIds.getBtn2Id());
-            Button btn3 = findViewById(pinKDBButtonsIds.getBtn3Id());
-            Button btn4 = findViewById(pinKDBButtonsIds.getBtn4Id());
-            Button btn5 = findViewById(pinKDBButtonsIds.getBtn5Id());
-            Button btn6 = findViewById(pinKDBButtonsIds.getBtn6Id());
-            Button btn7 = findViewById(pinKDBButtonsIds.getBtn7Id());
-            Button btn8 = findViewById(pinKDBButtonsIds.getBtn8Id());
-            Button btn9 = findViewById(pinKDBButtonsIds.getBtn9Id());
-            Button btnCancel = findViewById(pinKDBButtonsIds.getBtnCancelId());
-            Button btnClear = findViewById(pinKDBButtonsIds.getBtnClearId());
-            Button btnEnter = findViewById(pinKDBButtonsIds.getBtnEnterId());
+            Button btn0 = rootView.findViewWithTag(getString(R.string.btn0Tag));
+            Button btn1 = rootView.findViewWithTag(getString(R.string.btn1Tag));
+            Button btn2 = rootView.findViewWithTag(getString(R.string.btn2Tag));
+            Button btn3 = rootView.findViewWithTag(getString(R.string.btn3Tag));
+            Button btn4 = rootView.findViewWithTag(getString(R.string.btn4Tag));
+            Button btn5 = rootView.findViewWithTag(getString(R.string.btn5Tag));
+            Button btn6 = rootView.findViewWithTag(getString(R.string.btn6Tag));
+            Button btn7 = rootView.findViewWithTag(getString(R.string.btn7Tag));
+            Button btn8 = rootView.findViewWithTag(getString(R.string.btn8Tag));
+            Button btn9 = rootView.findViewWithTag(getString(R.string.btn9Tag));
+            Button btnClear = rootView.findViewWithTag(getString(R.string.btnClearTag));
+            Button btnCancel = rootView.findViewWithTag(getString(R.string.btnCancelTag));
+            Button btnEnter = rootView.findViewWithTag(getString(R.string.btnEnterTag));
 
             // ------ ONLY FOR TEST BUTTONS REFERENCES ---------------------------------------------
 

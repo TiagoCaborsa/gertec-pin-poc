@@ -12,6 +12,7 @@
         android:layout_height="@dimen/number_key_height"
         android:layout_alignBottom="@+id/btn_digit2"
         android:layout_toStartOf="@+id/btn_digit2"
+        android:tag="@string/btn1Tag"
         android:text="@string/key_1" />
 
     <Button
@@ -21,6 +22,7 @@
         android:layout_height="@dimen/number_key_height"
         android:layout_alignBottom="@+id/btn_digit5"
         android:layout_toStartOf="@+id/btn_digit5"
+        android:tag="@string/btn4Tag"
         android:text="@string/key_4" />
 
     <Button
@@ -30,6 +32,7 @@
         android:layout_height="@dimen/number_key_height"
         android:layout_alignBottom="@+id/btn_digit8"
         android:layout_toStartOf="@+id/btn_digit8"
+        android:tag="@string/btn7Tag"
         android:text="@string/key_7" />
 
     <Button
@@ -41,6 +44,7 @@
         android:layout_marginLeft="@dimen/number_key_border_margin"
         android:layout_marginRight="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_digit3"
+        android:tag="@string/btn2Tag"
         android:text="@string/key_2" />
 
     <Button
@@ -52,6 +56,7 @@
         android:layout_marginLeft="@dimen/number_key_border_margin"
         android:layout_marginRight="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_digit6"
+        android:tag="@string/btn5Tag"
         android:text="@string/key_5" />
 
     <Button
@@ -64,6 +69,7 @@
         android:layout_marginRight="@dimen/number_key_border_margin"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/btn_digit9"
+        android:tag="@string/btn8Tag"
         android:text="@string/key_8" />
 
     <Button
@@ -76,6 +82,7 @@
         android:layout_marginRight="@dimen/number_key_border_margin"
         android:layout_marginBottom="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_digit9"
+        android:tag="@string/btn0Tag"
         android:text="@string/key_0" />
 
     <Button
@@ -86,6 +93,7 @@
         android:layout_alignBottom="@+id/btn_cancel"
         android:layout_marginEnd="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_cancel"
+        android:tag="@string/btn3Tag"
         android:text="@string/key_3" />
 
     <Button
@@ -96,6 +104,7 @@
         android:layout_alignBottom="@+id/btn_clear"
         android:layout_marginEnd="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_clear"
+        android:tag="@string/btn6Tag"
         android:text="@string/key_6" />
 
 
@@ -107,6 +116,7 @@
         android:layout_alignTop="@+id/btn_enter"
         android:layout_marginEnd="@dimen/number_key_border_margin"
         android:layout_toStartOf="@+id/btn_enter"
+        android:tag="@string/btn9Tag"
         android:text="@string/key_9" />
 
     <Button
@@ -118,7 +128,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/number_key_horizontal_margin"
         android:layout_marginBottom="@dimen/number_key_vertical_margin"
-        android:background="@color/cancelColor" />
+        android:background="@color/cancelColor"
+        android:tag="@string/btnCancelTag" />
 
     <Button
         android:id="@+id/btn_clear"
@@ -129,7 +140,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/number_key_horizontal_margin"
         android:layout_marginBottom="@dimen/number_key_vertical_margin"
-        android:background="@color/deleteColor" />
+        android:background="@color/deleteColor"
+        android:tag="@string/btnClearTag" />
 
     <Button
         android:id="@+id/btn_enter"
@@ -140,7 +152,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/number_key_horizontal_margin"
         android:layout_marginBottom="@dimen/number_key_vertical_margin"
-        android:background="@color/enterColor" />
+        android:background="@color/enterColor"
+        android:tag="@string/btnEnterTag" />
 
     <TextView
         android:id="@+id/input_title"
