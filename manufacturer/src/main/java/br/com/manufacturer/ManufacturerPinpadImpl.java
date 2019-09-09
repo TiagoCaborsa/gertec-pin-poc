@@ -6,22 +6,23 @@ import android.util.Log;
 
 import java.util.Map;
 
-import br.com.bcapi.BcApi;
-import br.com.bcapi.Constants;
+import br.com.bcapi.Pinpad;
+import br.com.bcapi.Properties;
 import br.com.bcapi.ResultCode;
+import br.com.bcapi.RuntimeProperties;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
-public class ManufacturerBcApiImpl extends BcApi {
+public class ManufacturerPinpadImpl extends Pinpad {
 
-    private static final String TAG = ManufacturerBcApiImpl.class.getName();
+    private static final String TAG = ManufacturerPinpadImpl.class.getName();
     private final Context context;
-    private final int PIN_KBD_LAYOUT;
 
-    public ManufacturerBcApiImpl(Map<String, Object> properties) {
-        super(properties);
-        context = (Context) properties.get(Constants.ANDROID_CONTEXT);
-        PIN_KBD_LAYOUT = (int) properties.get(Constants.PinLayout.PIN_KBD_LAYOUT_ID);
+    public ManufacturerPinpadImpl(
+            Map<String, Object> properties, Map<String, Object> runtimeProperties
+    ) {
+        super(properties, runtimeProperties);
+        context = (Context) properties.get(Properties.ANDROID_CONTEXT);
     }
 
     @Override
@@ -38,7 +39,12 @@ public class ManufacturerBcApiImpl extends BcApi {
         Log.i(TAG, "openPinKBD: start");
         Intent intent = new Intent(context, PinKBDActivity.class);
         intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, PIN_KBD_LAYOUT);
+
+        intent.putExtra(
+                RuntimeProperties.PinLayout.PIN_KBD_LAYOUT_ID,
+                (int) runtimeProperties.get(RuntimeProperties.PinLayout.PIN_KBD_LAYOUT_ID)
+        );
+
         context.startActivity(intent);
         Log.i(TAG, "openPinKBD: end");
     }

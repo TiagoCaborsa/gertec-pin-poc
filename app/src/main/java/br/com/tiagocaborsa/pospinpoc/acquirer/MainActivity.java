@@ -8,15 +8,16 @@ import android.view.View;
 import java.util.HashMap;
 import java.util.Map;
 
-import br.com.bcapi.BcApi;
-import br.com.bcapi.Constants;
-import br.com.manufacturer.ManufacturerBcApiImpl;
+import br.com.bcapi.Pinpad;
+import br.com.bcapi.Properties;
+import br.com.bcapi.RuntimeProperties;
+import br.com.manufacturer.ManufacturerPinpadImpl;
 import br.com.tiagocaborsa.pospinpoc.R;
 
 public class MainActivity extends Activity {
 
     private static final String TAG = MainActivity.class.getName();
-    private BcApi bcApiImpl;
+    private Pinpad pinpadImpl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,13 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 final Map<String, Object> properties = new HashMap<>();
-                properties.put(Constants.ANDROID_CONTEXT, getApplicationContext());
-                properties.put(Constants.PinLayout.PIN_KBD_LAYOUT_ID, R.layout.softkeyboard);
+                final Map<String, Object> runtimeProperties = new HashMap<>();
+
+                properties.put(Properties.ANDROID_CONTEXT, getApplicationContext());
+
+                runtimeProperties.put(
+                        RuntimeProperties.PinLayout.PIN_KBD_LAYOUT_ID, R.layout.softkeyboard
+                );
 
                 final int[] resultCode = new int[1];
 
@@ -37,8 +43,8 @@ public class MainActivity extends Activity {
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            bcApiImpl = new ManufacturerBcApiImpl(properties);
-                            resultCode[0] = bcApiImpl.goOnChip("F27AHF27AHF72AHF7");
+                            pinpadImpl = new ManufacturerPinpadImpl(properties, runtimeProperties);
+                            resultCode[0] = pinpadImpl.goOnChip("F27AHF27AHF72AHF7");
                             Log.i(TAG, "run: " + resultCode[0]);
                         }
                     }).start();

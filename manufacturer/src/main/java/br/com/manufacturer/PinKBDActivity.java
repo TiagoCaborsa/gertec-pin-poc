@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import br.com.bcapi.Constants;
 import br.com.bcapi.R;
+import br.com.bcapi.RuntimeProperties;
 
 public class PinKBDActivity extends Activity {
 
@@ -21,7 +21,7 @@ public class PinKBDActivity extends Activity {
         setFinishOnTouchOutside(false);
 
         final int pinLayoutId = getIntent().
-                getIntExtra(Constants.PinLayout.PIN_KBD_LAYOUT_ID, 0);
+                getIntExtra(RuntimeProperties.PinLayout.PIN_KBD_LAYOUT_ID, 0);
 
         if (pinLayoutId != 0) {
             setContentView(pinLayoutId);
