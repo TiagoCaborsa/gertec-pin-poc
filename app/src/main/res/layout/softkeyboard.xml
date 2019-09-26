@@ -78,10 +78,9 @@
         android:layout_width="@dimen/number_key_width"
         android:layout_height="@dimen/number_key_height"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="@dimen/number_key_border_margin"
         android:layout_marginRight="@dimen/number_key_border_margin"
         android:layout_marginBottom="@dimen/number_key_border_margin"
-        android:layout_toStartOf="@+id/btn_digit9"
+        android:layout_alignStart="@+id/btn_digit8"
         android:tag="@string/btn0Tag"
         android:text="@string/key_0" />
 
@@ -149,7 +148,7 @@
         android:layout_width="@dimen/number_key_width"
         android:layout_height="@dimen/number_key_height"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/btn_digit0"
         android:layout_marginEnd="@dimen/number_key_horizontal_margin"
         android:layout_marginBottom="@dimen/number_key_vertical_margin"
         android:background="@color/enterColor"
